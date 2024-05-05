@@ -8,7 +8,7 @@
             var lastNameClaim = context.User.FindFirst(c => c.Type == "family_name")?.Value;
             if (!string.IsNullOrEmpty(firstNameClaim) && !string.IsNullOrEmpty(lastNameClaim))
             {
-                <text>Hello, @firstNameClaim @lastNameClaim!</text>
+                <text>@firstNameClaim @lastNameClaim</text>
             }
         }
         <button class="nav-link btn btn-link" @onclick="BeginLogOut">Log out</button>
